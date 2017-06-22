@@ -81,5 +81,12 @@ Optionally, create an LVM volume group named **lxc** for container file systems.
 ![Alt text](images/network-bridges.png?raw=true "Network Bridges")
 
 For a detailed reference of how the host and container networking is implemented, refer to Appendix E: Container networking.
+https://docs.openstack.org/project-deploy-guide/openstack-ansible/draft/app-networking.html#network-appendix
 
-For use case examples, refer to Appendix A: Example test environment configuration and Appendix B: Example production environment configuration.
+For use case examples, refer to Appendix A: Example test environment configuration 
+https://docs.openstack.org/project-deploy-guide/openstack-ansible/draft/app-config-test.html#test-environment-config
+and Appendix B: Example production environment configuration
+https://docs.openstack.org/project-deploy-guide/openstack-ansible/draft/app-config-prod.html#production-environment-config
+
+
+
