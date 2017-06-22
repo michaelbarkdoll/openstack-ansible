@@ -66,4 +66,13 @@ Logical Volume Manager (LVM) enables a single device to be split into multiple l
 
 **OpenStack-Ansible automatically configures LVM on the nodes, and overrides any existing LVM configuration**. If you had a customized LVM configuration, **edit the generated configuration file** as needed.
 
+To use the **optional** Block Storage (cinder) service, create an LVM volume group named **cinder-volumes** on the ***storage host***. Specify a metadata size of 2048 when creating the physical volume. For example:
+
+````
+# pvcreate --metadatasize 2048 physical_volume_device_path
+# vgcreate cinder-volumes physical_volume_device_path
+````
+
+Optionally, create an LVM volume group named **lxc** for container file systems. If the lxc volume group does not exist, containers are automatically installed on the file system under /var/lib/lxc by default.
+
 
