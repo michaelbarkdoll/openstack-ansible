@@ -47,7 +47,7 @@ Configure at least one network interface to access the Internet or suitable loca
 We also recommend setting your locale to en_US.UTF-8. Other locales might work, but they are not tested or supported.
 
 
-### Prepare the Deployment Host
+## Prepare the Deployment Host
 
 #### Ubuntu
 ````
@@ -93,4 +93,3 @@ $ scripts/bootstrap-ansible.sh
 ### Configure SSH keys
 
 Ansible uses SSH with public key authentication to connect the deployment host and target hosts. To reduce user interaction during Ansible operations, do not include passphrases with key pairs. However, if a passphrase is required, consider using the ssh-agent and ssh-add commands to temporarily store the passphrase before performing Ansible operations.
-
