@@ -44,3 +44,12 @@ If you require additional network configuration for your container interfaces (l
 **OpenStack-Ansible deploys the Compute service on the physical host rather than in a container.** The following diagram shows how to use bridges for network connectivity:
 
 ![Alt text](images/network/networkarch-bare-external.png?raw=true "Network Architecture Bare External")
+
+### Neutron traffic
+
+The following diagram shows how the Networking service (neutron) agents work with the br-vlan and br-vxlan bridges. Neutron is configured to use a DHCP agent, an L3 agent, and a Linux Bridge agent within a networking-agents container. The diagram shows how DHCP agents provide information (IP addresses and DNS servers) to the instances, and how routing works on the image.
+
+![Alt text](images/network/networking-neutronagents.png?raw=true "Neutron Agents")
+
+
+
