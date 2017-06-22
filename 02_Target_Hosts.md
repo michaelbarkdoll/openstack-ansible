@@ -77,17 +77,7 @@ Optionally, create an LVM volume group named **lxc** for container file systems.
 
 
 ### Network configuration
-The following table shows bridges that are to be configured on hosts.
 
-| Bridge name	| Best configured on	| With a static IP |
-|-------------|---------------------|------------------|
-| br-mgmt	    |On every node	      |      Always      |
-| br-storage	|On every storage node|	When component is deployed on metal
-On every compute node	Always
-br-vxlan	On every network node	When component is deployed on metal
-On every compute node	Always
-br-vlan	On every network node	Never
-On every compute node	Never
 For a detailed reference of how the host and container networking is implemented, refer to Appendix E: Container networking.
 
 For use case examples, refer to Appendix A: Example test environment configuration and Appendix B: Example production environment configuration.
