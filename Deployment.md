@@ -1,4 +1,5 @@
 Comparison of Deployment tools usage percentage:
+
 ![Alt text](images/tools-usage.png?raw=true "Tools Usage")
 
 - SaltStack: https://github.com/saurabhsurana/trove-installer/tree/master/saltstack
@@ -35,3 +36,12 @@ This guide refers to the following types of hosts:
 - Target hosts, where Ansible installs OpenStack services and infrastructure components
 
 ![Alt text](images/process.png?raw=true "Deployment Process")
+
+Install one of the following supported operating systems on the **deployment hosts**:
+
+Ubuntu server 16.04 (Xenial Xerus) LTS 64-bit
+Centos 7 64-bit
+
+Configure at least one network interface to access the Internet or suitable local repositories.
+
+We also recommend setting your locale to en_US.UTF-8. Other locales might work, but they are not tested or supported.
