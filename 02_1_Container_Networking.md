@@ -51,5 +51,6 @@ The following diagram shows how the Networking service (neutron) agents work wit
 
 ![Alt text](images/network/networking-neutronagents.png?raw=true "Neutron Agents")
 
+The following diagram shows how virtual machines connect to the br-vlan and br-vxlan bridges and send traffic to the network outside the host:
 
-
+![Alt text](images/network/networking-compute.png?raw=true "VM Compute Networking")
