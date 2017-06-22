@@ -39,9 +39,26 @@ This guide refers to the following types of hosts:
 
 Install one of the following supported operating systems on the **deployment hosts**:
 
-Ubuntu server 16.04 (Xenial Xerus) LTS 64-bit
-Centos 7 64-bit
+- Ubuntu server 16.04 (Xenial Xerus) LTS 64-bit
+- Centos 7 64-bit
 
 Configure at least one network interface to access the Internet or suitable local repositories.
 
 We also recommend setting your locale to en_US.UTF-8. Other locales might work, but they are not tested or supported.
+
+
+### Prepare the Deployment Host
+
+#### Ubuntu
+$ apt-get update
+$ apt-get dist-upgrade
+$ apt-get install aptitude build-essential git ntp ntpdate \
+  openssh-server python-dev sudo
+
+
+
+#### Centos 
+$ yum upgrade
+$ yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
+$ yum install git ntp ntpdate openssh-server python-devel \
+  sudo '@Development Tools'
