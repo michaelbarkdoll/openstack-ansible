@@ -93,3 +93,4 @@ $ scripts/bootstrap-ansible.sh
 ### Configure SSH keys
 
 Ansible uses SSH with public key authentication to connect the deployment host and target hosts. To reduce user interaction during Ansible operations, do not include passphrases with key pairs. However, if a passphrase is required, consider using the ssh-agent and ssh-add commands to temporarily store the passphrase before performing Ansible operations.
+
