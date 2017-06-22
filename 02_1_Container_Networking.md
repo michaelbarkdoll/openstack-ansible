@@ -27,3 +27,10 @@ The following image demonstrates how the container network interfaces are connec
 
 ![Alt text](images/network/networkcomponents.png?raw=true "Network Components")
 
+### Network diagrams
+
+#### Hosts with services running in containers
+The following diagram shows how all of the interfaces and bridges interconnect to provide network connectivity to the OpenStack deployment:
+
+![Alt text](images/network/networkarch-container-external.png?raw=true "Network Architecture Container External")
+
