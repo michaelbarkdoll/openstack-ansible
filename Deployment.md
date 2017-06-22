@@ -64,3 +64,32 @@ $ yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 $ yum install git ntp ntpdate openssh-server python-devel \
   sudo '@Development Tools'
 ````
+
+### Configure the network
+
+Ansible deployments fail if the deployment server can’t use Secure Shell (SSH) to connect to the containers.
+
+Configure the deployment host (where Ansible is executed) to be on the **same layer 2 network as the network designated for container management**. By default, this is the **br-mgmt network**. This configuration reduces the rate of failure caused by connectivity issues.
+
+Select an IP address from the following example range to assign to the deployment host:
+
+Container management: 172.29.236.0/22 (VLAN 10)
+
+
+### Install the source and dependencies for the deployment host.
+
+
+
+````
+# Clone the latest stable release of the OpenStack-Ansible Git repository in the /opt/openstack-ansible directory:
+$ git clone -b 16.0.0.0b2 https://git.openstack.org/openstack/openstack-ansible \
+  /opt/openstack-ansible
+# Change to the /opt/openstack-ansible directory, and run the Ansible bootstrap script:
+
+$ cd /opt/openstack-ansible
+$ scripts/bootstrap-ansible.sh
+````
+
+### Configure SSH keys
+
+Ansible uses SSH with public key authentication to connect the deployment host and target hosts. To reduce user interaction during Ansible operations, do not include passphrases with key pairs. However, if a passphrase is required, consider using the ssh-agent and ssh-add commands to temporarily store the passphrase before performing Ansible operations.
