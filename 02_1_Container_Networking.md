@@ -17,8 +17,13 @@ The combination of containers and flexible deployment options requires implement
 
   OpenStack-Ansible uses bridges to connect physical and logical network interfaces on the host to virtual network interfaces within containers.
 
-- Namespaces provide logically separate layer 3 environments (similar to routers) within a host. Namespaces use virtual interfaces to connect with other namespaces, including the host namespace. These interfaces, often called veth pairs, are virtually plugged in between namespaces similar to patch cables connecting physical devices such as switches and routers.
+- Namespaces provide logically separate layer 3 environments (similar to routers) within a host. Namespaces use virtual interfaces to connect with other namespaces, including the host namespace. These interfaces, often called ***veth pairs***, are virtually plugged in between namespaces similar to patch cables connecting physical devices such as switches and routers.
 
-  Each container has a namespace that connects to the host namespace with one or more veth pairs. Unless specified, the system generates random names for veth pairs.
+  Each container has a namespace that connects to the host namespace with one or more ***veth pairs***. Unless specified, the system generates **random names for veth pairs**.
+
 
 The following image demonstrates how the container network interfaces are connected to the host’s bridges and physical network interfaces:
+
+
+![Alt text](images/network/networkcomponents.png?raw=true "Network Components")
+
