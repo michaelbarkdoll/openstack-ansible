@@ -50,14 +50,17 @@ We also recommend setting your locale to en_US.UTF-8. Other locales might work, 
 ### Prepare the Deployment Host
 
 #### Ubuntu
+````
 $ apt-get update
 $ apt-get dist-upgrade
 $ apt-get install aptitude build-essential git ntp ntpdate \
   openssh-server python-dev sudo
+````
 
 #### Centos 
+````
 $ yum upgrade
 $ yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.rpm
 $ yum install git ntp ntpdate openssh-server python-devel \
   sudo '@Development Tools'
-
+````
