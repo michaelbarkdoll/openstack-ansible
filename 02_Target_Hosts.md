@@ -5,6 +5,7 @@ Install one of the following supported operating systems on the target host:
 - Centos 7 64-bit
 
 We recommend adding the Secure Shell (SSH) server packages to the installation on target hosts that do not have local (console) access.
+
 We also recommend setting your locale to en_US.UTF-8. Other locales might work, but they are not tested or supported.
 
 
