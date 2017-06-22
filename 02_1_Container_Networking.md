@@ -34,3 +34,13 @@ The following diagram shows how all of the interfaces and bridges interconnect t
 
 ![Alt text](images/network/networkarch-container-external.png?raw=true "Network Architecture Container External")
 
+The interface ***lxcbr0*** provides connectivity for the containers to the outside world, thanks to dnsmasq (dhcp/dns) + NAT.
+
+Note:
+If you require additional network configuration for your container interfaces (like changing the routes on eth1 for routes on the management network), please adapt your openstack_user_config.yml file. See Reference for openstack_user_config settings for more details.
+
+### Services running “on metal” (deploying directly on the physical hosts)
+
+**OpenStack-Ansible deploys the Compute service on the physical host rather than in a container.** The following diagram shows how to use bridges for network connectivity:
+
+![Alt text](images/network/networkarch-bare-external.png?raw=true "Network Architecture Bare External")
