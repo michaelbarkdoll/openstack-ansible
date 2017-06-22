@@ -78,6 +78,8 @@ Optionally, create an LVM volume group named **lxc** for container file systems.
 
 ### Network configuration
 
+![Alt text](images/network-bridges.png?raw=true "Network Bridges")
+
 For a detailed reference of how the host and container networking is implemented, refer to Appendix E: Container networking.
 
 For use case examples, refer to Appendix A: Example test environment configuration and Appendix B: Example production environment configuration.
