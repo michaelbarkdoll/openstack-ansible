@@ -52,11 +52,18 @@ reboot
 
 Ansible uses SSH to connect the deployment host and target hosts.
 
-Copy the contents of the public key file on the ***deployment host*** to the /root/.ssh/authorized_keys file on each target host.
+Copy the contents of the public key file on the **deployment host** to the /root/.ssh/authorized_keys file on each target host.
 
 Test public key authentication from the deployment host to each target host by using SSH to connect to the target host from the deployment host. If you can connect and get the shell without authenticating, it is working. SSH provides a shell without asking for a password.
 For more information about how to generate an SSH key pair, as well as best practices, see GitHub’s documentation about generating SSH keys.
 
 https://help.github.com/articles/connecting-to-github-with-ssh/
 
-OpenStack-Ansible deployments require the presence of a /root/.ssh/id_rsa.pub file on the ***deployment host***. The contents of this file is inserted into an authorized_keys file for the containers, which is a necessary step for the Ansible playbooks. You can override this behavior by setting the lxc_container_ssh_key variable to the public key for the container.
+OpenStack-Ansible deployments require the presence of a /root/.ssh/id_rsa.pub file on the **deployment host**. The contents of this file is inserted into an authorized_keys file for the containers, which is a necessary step for the Ansible playbooks. You can override this behavior by setting the lxc_container_ssh_key variable to the public key for the container.
+
+### Configure Storage
+Logical Volume Manager (LVM) enables a single device to be split into multiple logical volumes that appear as a physical storage device to the operating system. ***The Block Storage (cinder) service***, and the LXC containers that run the OpenStack infrastructure, ***can optionally use LVM for their data storage***.
+
+**OpenStack-Ansible automatically configures LVM on the nodes, and overrides any existing LVM configuration**. If you had a customized LVM configuration, **edit the generated configuration file** as needed.
+
+
